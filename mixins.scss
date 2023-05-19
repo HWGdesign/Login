@@ -6,8 +6,8 @@
 
 @mixin flexLeft {
      display: flex;
-     align-items: left;
      text-align: left;
+     align-items: center;
 }
 
 @mixin absoluteCenter {

@@ -22,7 +22,7 @@ body {
      color: $dark;
      width: 350px;
      height: auto;
-     padding: 4rem 2rem 4rem 2rem;
+     padding: 4.5rem 2.5rem;
      border-radius: 2rem;
      font-family: 'Manrope', sans-serif;
 }
@@ -105,30 +105,27 @@ h3 {
 }
 
 input {
+     width: 350px;
      height: 50px;
      padding-left: 20px;
-     border: 1px solid $grey-light;
+     border: none;
+     box-shadow: 1px 1px 1px 1px $grey-light;
      outline: none;
-     font-size: $medium;
+     font-size: $small;
      color: $dark;
      border-radius: 10em;
 }
 
 input::placeholder {
-     font-size: $medium;
      color: $grey;
-     font-size: small;
 }
 
-.email,
-.password {
+.input-element{
      position: relative;
-     display: grid;
-     grid-template-columns: auto 1fr auto;
+     width: 100%;
 }
 
-.email .eye,
-.password .eye {
+.input-element .eye{
      color: $grey;
      position: absolute;
      right: 1.1em;
@@ -136,12 +133,26 @@ input::placeholder {
      cursor: pointer;
 }
 
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+    display: none;
+}
+
 .password-h4,
-.email-h4 {
+.input-element-h4 {
+     width: 100%;
      position: absolute;
-     top: -1.85em;
-     left: 70px;
+     display: grid;
+     grid-template-columns: 50px 1fr;
+     top: -3em;
+     left: 0;
      font-size: $mini;
+}
+
+.text-h4 {
+     @include flexLeft;
+     
 }
 // ? FORGOT, NO ACCOUNT
 .info {
@@ -192,9 +203,12 @@ input::placeholder {
      background-color: $main-hover;
 }
 
+// ? NO ACCOUNT
+
 .noAccount {
-     padding-top: 1.5em;
+     padding-top: 2em;
      font-size: $mini;
+     @include flexCenter;
 }
 
 .signUp {

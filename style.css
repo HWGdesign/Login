@@ -22,7 +22,7 @@ body {
   color: #191923;
   width: 350px;
   height: auto;
-  padding: 4rem 2rem 4rem 2rem;
+  padding: 4.5rem 2.5rem;
   border-radius: 2rem;
   font-family: "Manrope", sans-serif;
 }
@@ -68,8 +68,8 @@ h3 {
 .title .text,
 .title .text-2 {
   display: flex;
-  align-items: left;
   text-align: left;
+  align-items: center;
 }
 
 .title .text-2 {
@@ -87,8 +87,8 @@ h3 {
 
 .inputs {
   display: flex;
-  align-items: left;
   text-align: left;
+  align-items: center;
   flex-direction: column;
   margin: 1em 0 1em 0;
   gap: 2em;
@@ -107,36 +107,31 @@ h3 {
 }
 
 input {
+  width: 350px;
   height: 50px;
   padding-left: 20px;
-  border: 1px solid #f2f7f7;
+  border: none;
+  box-shadow: 1px 1px 1px 1px #f2f7f7;
   outline: none;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #191923;
   border-radius: 10em;
 }
 
 input::-moz-placeholder {
-  font-size: 1.1rem;
   color: #88A09E;
-  font-size: small;
 }
 
 input::placeholder {
-  font-size: 1.1rem;
   color: #88A09E;
-  font-size: small;
 }
 
-.email,
-.password {
+.input-element {
   position: relative;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  width: 100%;
 }
 
-.email .eye,
-.password .eye {
+.input-element .eye {
   color: #88A09E;
   position: absolute;
   right: 1.1em;
@@ -144,12 +139,26 @@ input::placeholder {
   cursor: pointer;
 }
 
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear {
+  display: none;
+}
+
 .password-h4,
-.email-h4 {
+.input-element-h4 {
+  width: 100%;
   position: absolute;
-  top: -1.85em;
-  left: 70px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  top: -3em;
+  left: 0;
   font-size: 0.7rem;
+}
+
+.text-h4 {
+  display: flex;
+  text-align: left;
+  align-items: center;
 }
 
 .info {
@@ -202,8 +211,11 @@ input::placeholder {
 }
 
 .noAccount {
-  padding-top: 1.5em;
+  padding-top: 2em;
   font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .signUp {
