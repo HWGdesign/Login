@@ -10,41 +10,73 @@
 <body>
      <main class="container">
           <div class="container-content">
-               
                <div class="title">
-                    <i class="bi bi-balloon-heart"></i>
-                    <p>Hello</p>
+                    <div class="more">
+                         <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+
+                    <div class="text">
+                         <h1>Welcome to <span class="App-Name">WebsiteName</span></h1>
+                    </div>
+                    <div class="text-2">
+                         <h3>Login to your account</h3>
+                    </div>  
                </div>
 
                <div class="inputs">
-
                     <div class="email">
-                         <i class="bi bi-envelope"></i>
-                         <input placeholder="Email">
+                         <div class="email-h4">
+                              <h4>Email*</h4>
+                         </div>
+                         <div class="icon">
+                              <i class="bi bi-envelope-fill"></i>
+                         </div>
+                         <input placeholder="mail@website.com">
+                         <div class="eye">
+                              <i class="bi bi-eye-slash"></i>
+                         </div>
                     </div>
-                    
-                    <div class="login">
-                         <i class="bi bi-person"></i>
-                         <input placeholder="Login">
-                    </div>
+     
                     <div class="password">
-                         <i class="bi bi-lock"></i>
-                         <input placeholder="Password">
+                         <div class="password-h4">
+                              <h4>Password*</h4>
+                         </div>
+                         <div class="icon">
+                              <i class="bi bi-shield-lock-fill"></i>
+                         </div>
+                         <input placeholder="Min. 8 character">
+                         <div class="eye">
+                              <i class="bi bi-eye-slash"></i>
+                         </div>
                     </div> 
                </div>
                
-               <div class="forget">
-                    <p>Forgot password?</p>
+               <div class="info">
+                    <div class="remember">
+                         <div class="chceckbox">
+                              <i class="bi bi-check-square-fill"></i>
+                         </div>
+                         <!-- <i class="bi bi-check-square"></i> --> 
+                         <div class="text">
+                              <p>Remember me</p>
+                         </div>
+                         
+                    </div>
+
+                    <div class="forgot">
+                         <p>Forgot password?</p>
+                    </div>  
                </div>
+
+               <div class="login-btn">
+                    <button class="login">Login</button>
+               </div>
+
                <div class="noAccount">
-                    <p>Don't have account? Sign Up now</p>
+                    <p>Not registered yet?  <span class="signUp">Create an Account</span></p>
                </div>
-               
-               <div class="signupwith">
-                    <i class="bi bi-facebook"></i>
-               <i class="bi bi-google"></i>
-               </div>
-          </div>
+
+          </div>         
      </main>
 </body>
 <script src="script.js"></script>

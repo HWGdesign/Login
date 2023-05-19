@@ -1,8 +1,13 @@
-@mixin flexCenter($direction) {
+@mixin flexCenter {
      display: flex;
      justify-content: center;
      align-items: center;
-     flex-direction: ($direction);
+}
+
+@mixin flexLeft {
+     display: flex;
+     align-items: left;
+     text-align: left;
 }
 
 @mixin absoluteCenter {
